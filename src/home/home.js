@@ -1,7 +1,6 @@
 import React from 'react'
 import './home.css'
 import TopBar from '../topBar/topBar'
-import homeImage from '../assets/home_image.jpg'
 import homeImage1 from '../assets/home_image1.jpg'
 import AutoTypingAnimation from '../components/AutoTypingText'
 
