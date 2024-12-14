@@ -58,6 +58,7 @@ font-size: 20px;        }
 
 @media screen and (max-width: 600px){
     .left_container{
+        background-color: red;
         h1{
 font-size: 18px;        }        
     }
