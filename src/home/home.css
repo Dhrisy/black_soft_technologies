@@ -61,12 +61,12 @@ font-size: 20px;        }
         /* background-color: red; */
         height: 50%;
         h1{
-font-size: 18px;        }        
+font-size: 14px;        }        
     }
 
     .home_image {
-        height: 50%;
-        width: 50%;
+        height: 40%;
+        width: 70%;
     }
     
 }
