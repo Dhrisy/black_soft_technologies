@@ -1,0 +1,30 @@
+.home_container {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+
+
+}
+.left_container{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    margin-left: 20px;
+
+    h1{
+        animation: typing 100s steps(40, end), blink-caret 0.5s step-end infinite;
+    }
+}
+
+.home_image {
+    height: 100%;
+    width: 90%;
+}

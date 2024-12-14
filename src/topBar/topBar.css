@@ -1,0 +1,65 @@
+
+.topbar_container {
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    /* background-color: white; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    /* background: linear-gradient(180deg, black 50%, white 100%); */
+}
+
+
+
+.logo {
+    height: 10rem;
+    width: 10rem;
+    
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-left: 20px;
+   
+}
+
+.option_container {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+    /* width: calc(100% - 50px); */
+    margin-left: 10px;
+    margin-right: 20px;
+    justify-content: start;
+
+    .heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        
+
+        h2{
+            margin-right: 20px;
+            cursor: pointer;
+            color: white;
+        }
+        h2:hover{
+            color: rgb(34, 34, 34);
+            transform: translateY(-2px);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+
+}
+
+ 
+
+.divider {
+    height: 2px;
+    width: 100%;
+    background-color: white;
+}
