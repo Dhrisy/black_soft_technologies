@@ -40,20 +40,24 @@
         justify-content: end;
 
 
-        h2 {
-            margin-right: 20px;
-            cursor: pointer;
-            color: white;
-        }
-
-        h2:hover {
-            color: rgb(34, 34, 34);
-            transform: translateY(-2px);
-            transition: all 0.3s ease-in-out;
-        }
+       
     }
 
 
+}
+
+.top_item {
+    margin-right: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.top_item:hover{
+    color: rgb(34, 34, 34);
+    transform: translateY(-2px);
+    transition: all 0.3s ease-in-out;
 }
 
 
@@ -85,16 +89,14 @@
             flex-direction: row;
             justify-content: end;
 
-
-            h2 {
-                font-size: 18px;
-            }
         }
 
 
     }
 
-
+    .top_item {
+        font-size: 18px;
+    }
 
 }
 
@@ -110,20 +112,13 @@
 
     }
 
-    .option_container {
-
-        .heading {
-
-            h2 {
-                font-size: 15px;
-            }
-        }
-
-}
+    .top_item {
+        font-size: 15px;
+    }
 }
 
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
     .logo {
         height: 3rem;
         width: 3rem;
@@ -135,14 +130,9 @@
 
     }
 
-    .option_container {
+    .top_item {
+        font-size: 10px;
+        /* color: red; */
+    }
 
-        .heading {
-
-            h2 {
-                font-size: 8px;
-            }
-        }
-
-}
 }

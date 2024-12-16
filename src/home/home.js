@@ -6,10 +6,13 @@ import AutoTypingAnimation from '../components/AutoTypingText'
 
 function Home() {
   return (
-    <div className='home_container'>
+    <div id='home_page'  className='home_container'>
       <TopBar />
       <div className='left_container'>
       <AutoTypingAnimation text={" Crafting Future-Ready Solutions for Your Business "}/>
+      <span>
+      Providing innovative solutions to meet your unique business needs through custom software development, \ncutting-edge technology, and strategic digital marketing strategies.
+      </span>
       
       </div>
 
