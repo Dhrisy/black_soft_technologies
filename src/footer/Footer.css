@@ -1,0 +1,15 @@
+.Footer_container{
+    width: 100vw;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
+
+    p{
+        margin: auto;
+    }
+}

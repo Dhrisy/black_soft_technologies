@@ -30,7 +30,7 @@ function Services() {
                             We design and develop bespoke applications that elevate user experiences to new heights. By leveraging cutting-edge technologies, our expert developers create seamless, responsive, and visually captivating applications, custom-tailored to meet your business's unique needs. Let us transform your vision into robust, high-performing digital solutions that drive growth and innovation                    </span>
                     </div>
                 </div>
-                {/* software card */}
+                {/* software card  */}
                 <div className='card'>
                     <img src={SoftwareImage} alt='software' className='app_image' />
                     <div className='card_content'>

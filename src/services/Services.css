@@ -1,98 +1,147 @@
-.service_container{
+.service_container {
     height: 100vh;
     width: 100vw;
-    background-color: red;
-
-    h1{
-
-    }
-}
-
-.service_cards{
-    margin-top: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.card{
-    flex: 1;
-    border: 1px solid white;
-    border-radius: 20px;
-}
-
-
-
-
-
-@media screen and (max-width: 600px) {
-   .service_container{
-    /* height: 50vh; */
-    width: 100vw;
-    background-color: black;
+    background-color: white;
+    text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 10px;
 
-    h1{
-        padding: 0 0;
-        margin: 0 0;
-        font-size: 16px;
-        text-align: center;
-        color: white;
-    }
-   }
-.service_cards{
+    h1 {}
+}
 
-    /* height: 40vh; */
+.service_cards {
     margin-top: 10px;
     padding: 10px;
     display: flex;
-    flex-direction: column;
-}
-.card{
-    
-    width: 100%;
-    background-color: black;
-    margin-bottom: 10px;
-    flex: 1;
-    border: 1px solid white;
-    border-radius: 10px;
-    display: flex;
     flex-direction: row;
-    justify-content: start;
-    align-items: center;
-
-   
+    justify-content: space-evenly;
+    margin: 10px;
     
 }
 
-.card_content{
+.card {
+    /* flex: 1; */
+    width: 250px;
+
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 10px 10px;
+
+}
+
+.card_content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
     padding: 0 10px;
+    align-items: center;
 
-    span{
-        color: white;
-        font-size: 8px;
+    span {
+        color: black;
+        font-size: 15px;
         margin-bottom: 10px;
+        text-align: justify;
     }
-    h3{
+
+    h3 {
         color: rgb(95, 95, 238);
         margin: 10px 0;
         padding: 0;
-        text-align: justify;
-
-        font-size: 14px;
+        text-align: center;
+        font-size: 20px;
     }
 }
 
-.app_image{
-    height: 10vh;
+.app_image {
+    /* height: 200vw;
+    height: 50vh; */
+    height: 100px;
+    margin: 10px 10px;
+    border-radius: 30px;
+    /* height: 20vh;
+    width: 100%;
     width: calc(100% - 80vw);
     margin: 10px 10px;
-    border-radius: 5px;
+    border-radius: 5px; */
 }
+
+
+
+
+@media screen and (max-width: 600px) {
+    .service_container {
+        /* height: 50vh; */
+        width: 100vw;
+        background-color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        h1 {
+            padding: 0 0;
+            margin: 0 0;
+            font-size: 16px;
+            text-align: center;
+            color: black;
+        }
+    }
+
+    .service_cards {
+
+        /* height: 40vh; */
+        margin-top: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+
+        width: 100%;
+        background-color: white;
+        margin-bottom: 10px;
+        flex: 1;
+        border: 1px solid black;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        color: black;
+
+
+
+    }
+
+    .card_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 0 10px;
+
+        span {
+            color: black;
+            font-size: 8px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: rgb(95, 95, 238);
+            margin: 10px 0;
+            padding: 0;
+            text-align: justify;
+
+            font-size: 14px;
+        }
+    }
+
+    .app_image {
+        height: 10vh;
+        width: calc(100% - 80vw);
+        margin: 10px 10px;
+        border-radius: 5px;
+    }
 
 }
