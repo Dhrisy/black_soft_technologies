@@ -1,0 +1,27 @@
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+}
+
+.stats-item {
+    text-align: center;
+}
+
+.stats-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #3182ce;
+    margin-bottom: 0.5rem;
+}
+
+.stats-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #4a4a4a;
+}

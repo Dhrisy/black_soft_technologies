@@ -1,26 +1,40 @@
-import React from 'react'
-import './home.css'
-import TopBar from '../topBar/topBar'
-import homeImage1 from '../assets/home_image1.jpg'
-import AutoTypingAnimation from '../components/AutoTypingText'
+import React from 'react';
+import './home.css';
+import TopBar from '../topBar/topBar';
+import AutoTypingAnimation from '../components/AutoTypingText';
+import homeImage1 from '../assets/home_image1.jpg';
 
 function Home() {
   return (
-    <div id='home_page'  className='home_container'>
+    <div id="home_page" className="home_container">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        className="background_video"
+      >
+        <source src={require('../assets/bg1.mp4')} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* TopBar */}
       <TopBar />
-      <div className='left_container'>
-      <AutoTypingAnimation text={" Crafting Future-Ready Solutions for Your Business "}/>
-      <span>
-      Providing innovative solutions to meet your unique business needs through custom software development, \ncutting-edge technology, and strategic digital marketing strategies.
-      </span>
-      
+
+      {/* Content */}
+      <div className="content">
+        <div className="left_container">
+          <AutoTypingAnimation text={"Crafting Future-Ready Solutions for Your Business"} />
+          <p className="description_text">
+            Providing innovative solutions to meet your unique business needs through custom software development,
+            cutting-edge technology, and strategic digital marketing strategies.
+          </p>
+        </div>
+        
       </div>
-
-      <img src={homeImage1} alt='home_image' className='home_image' />
-
+      
     </div>
-
-  )
+  );
 }
 
-export default Home
+export default Home;

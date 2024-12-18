@@ -1,0 +1,47 @@
+.technologies-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.technologies-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.technologies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.technology-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: 100px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.technology-card:hover {
+    transform: translateY(-5px);
+}
+
+.technology-logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.technology-card p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}

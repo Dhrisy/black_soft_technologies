@@ -1,48 +1,108 @@
-import React from 'react'
-import './Contact.css'
-import { useRef } from 'react'
-import emailjs from '@emailjs/browser'
-import Logo from '../assets/logo.jpg'
+import React, { useRef } from "react";
+import "./Contact.css";
+import emailjs from "@emailjs/browser";
+import Logo from "../assets/logo.jpg"; // Ensure correct path
 
 function Contact() {
-    const formRef = useRef(); // Use React's useRef hook
-    const sendEmail = (e) => {
-        e.preventDefault();
+  const formRef = useRef();
 
-        emailjs
-            .sendForm('service_shp8rkz', 'template_yhkdkge', formRef.current, {
-                publicKey: 'UfCdklsBbFGX3MeFY',
-            })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                    alert('Email sent');
-                    e.target.reset();
-                },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                },
-            );
-    };
-    return (
-        <div className='contact_container' id='contact_screen'>
-            <img src={Logo} alt='app_logo' />
-            <div className='content'>
-                <h1>Let's talk</h1>
-                <h3>For queries, please email us !</h3>
-                <form ref={formRef} onSubmit={sendEmail} className='form_content'>
-                <input
-                    id='user_name' type='text' className='name'
-                    placeholder='Your name' name='from_name' />
-                <input id='user_email' type='text' className='email' placeholder='Your email' name='from_email' />
-                <textarea id='user_message' type='text' className='message' placeholder='Your Message' name='message' rows={4} />
+  // Function to send email
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-                <button type='submit' value="Send" className='submitBtn'>Submit</button>
-                </form>
+    emailjs
+      .sendForm("service_shp8rkz", "template_yhkdkge", formRef.current, {
+        publicKey: "UfCdklsBbFGX3MeFY",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          alert("Email sent successfully!");
+          e.target.reset();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          alert("Failed to send email. Please try again later.");
+        }
+      );
+  };
 
-            </div>
-        </div>
-    )
+  return (
+    <div className="contact_container" id="contact_screen">
+      {/* Logo */}
+      <img src={Logo} alt="app_logo" className="contact_image" />
+     <div className="contact_form">
+     <h1>Contact Us</h1>
+     <h3>We'd love to hear from you!</h3>
+     <form ref={formRef} onSubmit={sendEmail} className="form_content">
+          <input
+            id="user_name"
+            type="text"
+            className="name"
+            placeholder="Your Name"
+            name="from_name"
+            required
+          />
+          <input
+            id="user_email"
+            type="email"
+            className="email"
+            placeholder="Your Email"
+            name="from_email"
+            required
+          />
+          <textarea
+            id="user_message"
+            className="message"
+            placeholder="Your Message"
+            name="message"
+            rows={4}
+            required
+          />
+          <button type="submit" className="submitBtn">
+            Submit
+          </button>
+        </form>
+      </div>
+      {/* <div className="content">
+        <h1>Contact Us</h1>
+        <h3>We'd love to hear from you!</h3>
+
+        {/* Contact Form 
+        <form ref={formRef} onSubmit={sendEmail} className="form_content">
+          <input
+            id="user_name"
+            type="text"
+            className="name"
+            placeholder="Your Name"
+            name="from_name"
+            required
+          />
+          <input
+            id="user_email"
+            type="email"
+            className="email"
+            placeholder="Your Email"
+            name="from_email"
+            required
+          />
+          <textarea
+            id="user_message"
+            className="message"
+            placeholder="Your Message"
+            name="message"
+            rows={4}
+            required
+          />
+          <button type="submit" className="submitBtn">
+            Submit
+          </button>
+        </form>
+    
+    
+      </div> */}
+    </div>
+  );
 }
 
-export default Contact
+export default Contact;

@@ -10,7 +10,7 @@ function App() {
     <div className='app_container'>
       <Home/>
       <Services/>
-      <About/>
+      <About />
       <Contact/>
       <Footer/>
     </div>

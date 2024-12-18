@@ -1,89 +1,87 @@
-.home_container {
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-
-
-
+/* Background Video */
+.background_video {
+    position: relative;
+    /* Make the video fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure video covers the full area */
+    z-index: -2;
+    /* Keep the video at the very back */
 }
 
-.left_container {
-    height: 100%;
+/* Overlay Gradient for Readability */
+.overlay_gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: black;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    z-index: -1;
+    /* Keep the gradient above video but behind content */
+}
+
+/* Main Home Container */
+.home_container {
+    position: relative;
+    z-index: 0;
+    /* Ensure the content stays above the video */
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: white;
-    margin-left: 20px;
-
-    span{
-        font-size: 15px;
-    }
-
-    /* h1{
-        animation: typing 100s steps(40, end), blink-caret 0.5s step-end infinite;
-    } */
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
 }
 
-.home_image {
-    height: 100%;
-    width: 90%;
+/* Content Container */
+.content {
+    position: absolute;
+        /* Ensures it is placed above other elements */
+        /* z-index: 2; */
+        /* Place content above the video and gradient */
+       /* top: 50%;
+        /* Align vertically */
+       /* left: 50%;
+        /* Align horizontally */
+        transform: translate(-50%, -50%);
+        /* Perfect center alignment */
+        text-align: center;
+        /* Keep text centered */
+        color: #ffffff;
+        /* Ensure readability */
+        padding: 2rem;
+        box-sizing: border-box;
+        margin-top: 100px;
+    }
+
+/* Left Content */
+.left_container {
+    margin-top: 2rem;
+    animation: fadeInUp 1.2s ease-in-out;
 }
 
-
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-
-
-    .left_container {
-        h1 {
-            font-size: 30px;
-        }
-    }
+.description_text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ddd;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
 }
 
-
-@media screen and (min-width: 600px) and (max-width: 768px) {
-
-
-    .left_container {
-        h1 {
-            font-size: 20px;
-        }
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
     }
 
-    .home_image {
-        height: 80%;
-        width: 60%;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-
-}
-
-@media screen and (max-width: 600px) {
-    .home_container {
-        height: 50vh;
-
-    }
-
-    .left_container {
-        /* background-color: red;  */
-        width: 100%;
-
-        h1 {
-            font-size: 11px;
-        }
-        span{
-            font-size: 6px;
-        }
-    }
-
-    .home_image {
-        height: 100%;
-        width: 70%;
-    }
-
 }
