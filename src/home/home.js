@@ -2,7 +2,7 @@ import React from 'react';
 import './home.css';
 import TopBar from '../topBar/topBar';
 import AutoTypingAnimation from '../components/AutoTypingText';
-import homeImage1 from '../assets/home_image1.jpg';
+
 
 function Home() {
   return (
