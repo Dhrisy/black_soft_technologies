@@ -1,13 +1,12 @@
 import React from 'react';
 import './home.css';
-import TopBar from '../topBar/topBar';
 import AutoTypingAnimation from '../components/AutoTypingText';
 
 
 function Home() {
   return (
     <div id="home_page" className="home_container">
-      {/* Background Video */}
+      
       <video
         autoPlay
         loop
@@ -18,8 +17,7 @@ function Home() {
         Your browser does not support the video tag.
       </video>
 
-      {/* TopBar */}
-      <TopBar />
+     
 
       {/* Content */}
       <div className="content">

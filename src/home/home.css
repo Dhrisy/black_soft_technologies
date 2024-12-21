@@ -1,6 +1,6 @@
 /* Background Video */
 .background_video {
-    position: relative;
+    position: absolute;
     /* Make the video fixed to the viewport */
     top: 0;
     left: 0;
@@ -26,6 +26,7 @@
 
 /* Main Home Container */
 .home_container {
+    /* background-color: green; */
     position: relative;
     z-index: 0;
     /* Ensure the content stays above the video */
@@ -40,28 +41,28 @@
 
 /* Content Container */
 .content {
+    
     position: absolute;
-        /* Ensures it is placed above other elements */
-        /* z-index: 2; */
-        /* Place content above the video and gradient */
-       /* top: 50%;
-        /* Align vertically */
-       /* left: 50%;
-        /* Align horizontally */
-        transform: translate(-50%, -50%);
-        /* Perfect center alignment */
-        text-align: center;
-        /* Keep text centered */
-        color: #ffffff;
-        /* Ensure readability */
-        padding: 2rem;
-        box-sizing: border-box;
-        margin-top: 100px;
-    }
+    /* background-color: red; */
+    transform: translate(-50%, -50%);
+    /* Perfect center alignment */
+    text-align: start;
+    /* Keep text centered */
+    color: #ffffff;
+    /* Ensure readability */
+    padding: 2rem;
+    box-sizing: border-box;
+    margin-top: calc(100vh - 100px);
+    /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+}
 
 /* Left Content */
 .left_container {
     margin-top: 2rem;
+    /* background-color: purple; */
     animation: fadeInUp 1.2s ease-in-out;
 }
 
