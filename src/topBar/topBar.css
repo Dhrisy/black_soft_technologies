@@ -80,7 +80,8 @@
 }
 
 .top_item:hover {
-    color: #ed27d3;
+    /* color: #ed27d3; */
+    color: orangered;
     /* Light color for hover */
 }
 

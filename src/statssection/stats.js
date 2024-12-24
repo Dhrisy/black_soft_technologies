@@ -1,6 +1,6 @@
 import React from 'react';
 import CountUp from 'react-countup';
-import './StatsSection.css'; // Add custom styles here
+import './stats.css'; // Add custom styles here
 
 function StatsSection() {
   return (

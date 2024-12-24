@@ -14,7 +14,7 @@ function About() {
         <p className='about_subdescription'>
           Committed to <strong>excellence</strong>, we approach every project with a focus on <em>innovation</em>, precision, and delivering success that drives your business forward.
         </p>
-        <button className='about_cta'>Learn More</button>
+        {/* <button className='about_cta'>Learn More</button> */}
       </div>
     </div>
   );
