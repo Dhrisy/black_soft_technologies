@@ -1,12 +1,13 @@
 import React, { useRef } from "react";
-import "./Contact.css";
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import Logo from "../assets/logo.jpg"; // Ensure correct path
+import "./Contact.css";
+import Logo from "../assets/logo.jpg";
+import bgg from "../assets/bdd.png"; // Ensure correct path
 
-function Contact() {
+const Contact = () => {
   const formRef = useRef();
 
-  // Function to send email
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -28,93 +29,102 @@ function Contact() {
   };
 
   return (
-    <div className="contact_container" id="contact_screen">
-      <img src={Logo} alt="app_logo" className="contact_image" />
-      {/* Logo */}
-      <div className="address_container">
-      
-      <h2 className="we_are_here">We are here..!</h2>
-      <h3>Digital innovation powers the engine of every business success</h3>
-      <h2 className="address">Address</h2>
-      <span>__________</span>
-      <h2 className="contact">Contact</h2>
-      <div className="numbers">
-        <span>+91 9961588563</span>
-        <span>+91 9207205255</span>
-      </div>
-      <h2 className="email">Email</h2>
-      <span>blacksofttechnologies@gmail.com</span>
-      </div>
-     <div className="contact_form">
-     <h1>Contact Us</h1>
-     <h3>We'd love to hear from you!</h3>
-     <form ref={formRef} onSubmit={sendEmail} className="form_content">
-          <input
-            id="user_name"
-            type="text"
-            placeholder="Your Name"
-            name="from_name"
-            required
-          />
-          <input
-            id="user_email"
-            type="email"
-            placeholder="Your Email"
-            name="from_email"
-            required
-          />
-          <textarea
-            id="user_message"
-            className="message"
-            placeholder="Your Message"
-            name="message"
-            rows={4}
-            required
-          />
-          <button type="submit" className="submitBtn">
-            Submit
-          </button>
-        </form>
-      </div>
-      {/* <div className="content">
-        <h1>Contact Us</h1>
-        <h3>We'd love to hear from you!</h3>
+    <section className="contact-section" style={{ backgroundImage: `url(${bgg})` }}>
+      <div className="container" >
+        {/* Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="header"
+        >
+          <h1 className="heading">Contact Us</h1>
+          <p className="subheading">Reach out for a new project or just say hello</p>
+        </motion.div>
 
-        {/* Contact Form 
-        <form ref={formRef} onSubmit={sendEmail} className="form_content">
-          <input
-            id="user_name"
-            type="text"
-            className="name"
-            placeholder="Your Name"
-            name="from_name"
-            required
-          />
-          <input
-            id="user_email"
-            type="email"
-            className="email"
-            placeholder="Your Email"
-            name="from_email"
-            required
-          />
-          <textarea
-            id="user_message"
-            className="message"
-            placeholder="Your Message"
-            name="message"
-            rows={4}
-            required
-          />
-          <button type="submit" className="submitBtn">
-            Submit
-          </button>
-        </form>
-    
-    
-      </div> */}
-    </div>
+        <div className="contact-content"  >
+          {/* Left Section */}
+          <motion.div
+            className="left_section"
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <img src={Logo} alt="app_logo" className="contact_logo" />
+           
+            <p className="description">
+              We would be thrilled to hear from you! Please fill in the form or email us your requirements. Let’s build something amazing together!
+            </p>
+            <p className="address_details">
+              <strong>Address:</strong>Suite 369, LR Towers, South Janatha Road, Palarivattom, Kochi, Kerala 682025
+            </p>
+            <p className="contact_details">
+              <strong>Contact:</strong> +91 9961588563, +91 9207205255
+            </p>
+            <p className="email_details">
+              <strong>Email:</strong> blacksofttechnologies@gmail.com
+            </p>
+          </motion.div>
+
+          {/* Right Section - Contact Form */}
+          <motion.div
+            className="right_section"
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <h3>Send Us a Message</h3>
+            <form ref={formRef} onSubmit={sendEmail}>
+              <input
+                type="text"
+                placeholder="Your Name"
+                name="from_name"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                name="from_email"
+                required
+              />
+              <textarea
+                placeholder="Your Message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+              <motion.button
+                type="submit"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="motion-button"
+              >
+                <span className="gradient-overlay" />
+                <span className="button-content">
+                  <div className="icon-wrapper">
+                    <span>Submit</span>
+                    <svg
+                      className="icon"
+                      aria-hidden="true"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clipRule="evenodd"
+                        d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                        fillRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </span>
+              </motion.button>
+            </form>
+          </motion.div>
+        </div>
+      </div>
+    </section>
   );
-}
+};
 
 export default Contact;

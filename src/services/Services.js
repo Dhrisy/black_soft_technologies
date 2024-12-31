@@ -1,164 +1,102 @@
-// import React from "react";
-// import "./Services.css";
-// import { useRef, useEffect, useState } from "react";
-// import ServiceCard from "../components/service_card";
-// import DigitalMarketing from '../assets/digital_marketing.png'
-// import MobileApp from '../assets/mobile-application.png'
-// import WebApp from '../assets/web_development.png'
-// import SoftwareDev from '../assets/software_development.png'
-// import Branding from '../assets/brannding.png'
-
-
-
-// function Services() {
-//   const scrollContainerRef = useRef(null);
-//   const [isHorizontalScrolling, setIsHorizontalScrolling] = useState(false);
-
-//   useEffect(()=>{
-//     const scrollController = scrollContainerRef.current;
-
-//     const handleHorizontalScroll = (e) => {
-//       if(e.deltaY == 0){
-//         setIsHorizontalScrolling(false);
-//         return;
-//       }
-
-//       if(isHorizontalScrolling){
-//         e.preventDefault();
-//       }
-//     };
-
-
-//     const handleVerticalScroll = (e) => {
-//       const scrollContainer = scrollContainerRef.current;
-//       if(e.deltaY != 0){
-//         scrollContainer.scrollLeft += e.deltaY;
-//         setIsHorizontalScrolling(true);
-//       }
-//     };
-//     scrollController.addEventListener('wheel', handleVerticalScroll, { passive: false });
-//     scrollController.addEventListener('wheel', handleHorizontalScroll, { passive: false });
-
-//     return () => {
-//       scrollController.removeEventListener('wheel', handleVerticalScroll);
-//       scrollController.removeEventListener('wheel', handleHorizontalScroll);
-//     };
-//   }, [isHorizontalScrolling]);
-
-//   return (
-//     <div id="service_screen" className="service_container">
-//        <h1 className="service_title">Your Ultimate Business Partner for Success</h1>
-//       <div className="cards_lists"
-//       ref={scrollContainerRef}
-//       >
-//       <ServiceCard
-//        title={"Mobile App Development"}
-//        description={"Innovative and user-friendly mobile applications are key to driving customer satisfaction and fueling business growth. Transform your digital presence with intuitive and feature-rich apps."}
-//        devImage={MobileApp} />
-//        <ServiceCard
-//        title={"Web App Development"}
-//        description={"Elevate user experiences with cutting-edge, responsive, and visually captivating web applications tailored to your business needs."}
-//        devImage={WebApp} />
-//        <ServiceCard
-//        title={"Software Development"}
-//        description={"From concept to implementation, we deliver custom software solutions that streamline processes and optimize business performance."}
-//        devImage={SoftwareDev} />
-//        <ServiceCard
-//        title={"Digital Marketing"}
-//        description={"Our strategic digital marketing services increase brand visibility and customer reach through compelling campaigns and creative content."}
-//        devImage={DigitalMarketing} />
-//        <ServiceCard
-//        title={"Branding"}
-//        description={"Build a strong, unique identity for your business with our branding solutions that leave a lasting impression in the digital marketplace."}
-//        devImage={Branding} />
-//       </div>
-     
-
-//       <div className="service_cards">
-       
-
-       
-
-        
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Services;
-
-
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import "./Services.css";
-import ServiceCard from "../components/service_card";
-import MobileApp from '../assets/mobile-application.png';
-import WebApp from '../assets/web_development.png';
-import SoftwareDev from '../assets/software_development.png';
-import DigitalMarketing from '../assets/digital_marketing.png';
-import Branding from '../assets/brannding.png';
-import { motion } from "framer-motion";
+import DigitalMarketing from '../assets/digital.jpg'
+import MobileApp from '../assets/app.jpg'
+import WebApp from '../assets/webdev.png'
+import SoftwareDev from '../assets/software.jpg'
+import Branding from '../assets/brand.jpg'
 
 function Services() {
-  const serviceContainerRef = useRef(null);
-
-  useEffect(() => {
-    const serviceContainer = serviceContainerRef.current;
-
-    const handleScroll = (e) => {
-      if (serviceContainer) {
-        const isHorizontal = 
-          serviceContainer.scrollWidth > serviceContainer.clientWidth;
-
-        if (isHorizontal && e.deltaY !== 0) {
-          serviceContainer.scrollLeft += e.deltaY;
-          e.preventDefault(); // Prevent default vertical scrolling behavior.
-        }
-      }
-    };
-
-    serviceContainer.addEventListener("wheel", handleScroll, { passive: false });
-
-    return () => {
-      serviceContainer.removeEventListener("wheel", handleScroll);
-    };
-  }, []);
-
   return (
     <div id="service_screen" className="service_container">
       <h1 className="service_title">Your Ultimate Business Partner for Success</h1>
-      <motion.div
-      initial = {{opacity: 0, x: -180}}
-       animate={{ y: 10, x: 0 , opacity: 1, direction: 'initial'}} 
-       
-       transition={{duration: 3,  type: "spring" }} 
-      ref={serviceContainerRef} 
-      className="cards_lists">
-        <ServiceCard
-          title={"Mobile App Development"}
-          description={"Innovative and user-friendly mobile applications are key to driving customer satisfaction and fueling business growth. Transform your digital presence with intuitive and feature-rich apps."}
-          devImage={MobileApp}
-        />
-        <ServiceCard
-          title={"Web App Development"}
-          description={"Elevate user experiences with cutting-edge, responsive, and visually captivating web applications tailored to your business needs."}
-          devImage={WebApp}
-        />
-        <ServiceCard
-          title={"Software Development"}
-          description={"From concept to implementation, we deliver custom software solutions that streamline processes and optimize business performance."}
-          devImage={SoftwareDev}
-        />
-        <ServiceCard
-          title={"Digital Marketing"}
-          description={"Our strategic digital marketing services increase brand visibility and customer reach through compelling campaigns and creative content."}
-          devImage={DigitalMarketing}
-        />
-        <ServiceCard
-          title={"Branding"}
-          description={"Build a strong, unique identity for your business with our branding solutions that leave a lasting impression in the digital marketplace."}
-          devImage={Branding}
-        />
-      </motion.div>
+
+      <div className="flip-card-container">
+        <div className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front">
+              <img 
+                src={MobileApp}
+                alt="Mobile App Development"
+                className="flip-card-image" 
+              />
+              <p className="title">Mobile App Development</p>
+            </div>
+            <div className="flip-card-back">
+              <p className="title">Mobile App Development</p>
+              <p>We create custom, user-friendly mobile apps with intuitive designs, seamless functionality, and the latest technologies, delivering scalable solutions to enhance engagement and drive success.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front">
+              <img 
+                src={WebApp}
+                alt="Web Development" 
+                className="flip-card-image" 
+              />
+              <p className="title">Web Development</p>
+            </div>
+            <div className="flip-card-back">
+              <p className="title">Web Development</p>
+              <p>We create custom, responsive websites with intuitive navigation, seamless functionality, and modern technologies. Our team delivers tailored, high-performance solutions that drive success and foster lasting connections, all while aligning with your business goals.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front">
+              <img 
+                src={SoftwareDev}
+                alt="Software Development" 
+                className="flip-card-image" 
+              />
+              <p className="title">Software Development</p>
+            </div>
+            <div className="flip-card-back">
+              <p className="title">Software Development</p>
+              <p>We specialize in developing custom software solutions that are efficient, scalable, and tailored to meet your unique business needs. Our team combines innovation with technical expertise to deliver high-performance software that enhances productivity and drives long-term success.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front">
+              <img 
+                src={DigitalMarketing}
+                alt="Digital Marketing" 
+                className="flip-card-image" 
+              />
+              <p className="title">Digital Marketing</p>
+            </div>
+            <div className="flip-card-back">
+              <p className="title">Digital Marketing</p>
+              <p>We offer comprehensive digital marketing services designed to boost your brand’s visibility and drive engagement. By leveraging the latest strategies and tools, we deliver targeted campaigns that enhance online presence, attract customers, and drive measurable results for your business.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front">
+              <img 
+                src={Branding}
+                alt="Branding" 
+                className="flip-card-image" 
+              />
+              <p className="title">Branding</p>
+            </div>
+            <div className="flip-card-back">
+              <p className="title">Branding</p>
+              <p>We specialize in creating powerful brand identities that resonate with your audience. By combining creativity with strategic insights, we craft unique branding solutions that establish a strong market presence, foster customer loyalty, and drive business growth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

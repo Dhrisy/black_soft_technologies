@@ -1,6 +1,7 @@
 import React from 'react';
 import './home.css';
 import AutoTypingAnimation from '../components/AutoTypingText';
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 
 function Home() {
@@ -27,9 +28,16 @@ function Home() {
             Providing innovative solutions to meet your unique business needs through custom software development,
             cutting-edge technology, and strategic digital marketing strategies.
           </p>
+          
         </div>
-        
+       <a   href="https://wa.me/+919544518563" class="start-project-btn">Start a Project</a>
       </div>
+       <div className="social-iconx">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+          </div>
+
       
     </div>
   );

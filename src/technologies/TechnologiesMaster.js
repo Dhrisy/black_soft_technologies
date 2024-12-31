@@ -6,14 +6,34 @@ import './technologies.css'
 function TechnologiesMaster() {
   // Array of technologies
 const technologies = [
-  { id: 1, name: "Node Js", logo: "https://img.icons8.com/?size=100&id=54087&format=png&color=000000" },
-  { id: 2, name: "Flutter", logo: "https://img.icons8.com/?size=100&id=7I3BjCqe9rjG&format=png&color=000000" },
-  { id: 3, name: "Laravel", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" },
-  { id: 4, name: "Android", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" },
-  { id: 5, name: "Python", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" },
-  // { id: 6, name: "Magento", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Magento_Logo.svg" },
-  // { id: 7, name: "iOS", logo: "https://upload.wikimedia.org/wikipedia/commons/6/67/IOS_logo.svg" },
-  { id: 8, name: "Wordpress", logo: "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg" },
+  {
+    id: 1, name: "Node Js",logo: "https://cdn3d.iconscout.com/3d/free/thumb/free-nodejs-9294859-7578002.png"
+  },
+   {
+    id: 2, name: "Swift",
+    logo: "https://cdn3d.iconscout.com/3d/free/thumb/free-swift-9294866-7578009.png"
+  },
+  { id: 3, name: "Flutter", logo: "https://cdn3d.iconscout.com/3d/free/thumb/free-flutter-9294855-7577998.png" },
+ 
+
+  {
+    id: 4, name: "Android",
+    logo: "https://cdn3d.iconscout.com/3d/free/thumb/free-android-5562358-4642762.png"
+  },
+  {
+    id: 5, name: "React",
+    logo: "https://th.bing.com/th/id/OIP.9RZJev6qmnq2-Qyr41QbjQAAAA?rs=1&pid=ImgDetMain"
+  },
+   {
+    id: 6, name: "Java",
+    logo: "https://cdn3d.iconscout.com/3d/free/thumb/free-java-9294874-7578017.png"
+  },
+    {
+    id: 7, name: "Python",
+    logo: "https://cdn3d.iconscout.com/3d/free/thumb/free-python-9294858-7578001.png"
+  },
+ 
+  { id: 8, name: "Wordpress", logo: "https://cdn3d.iconscout.com/3d/free/thumb/free-wordpress-9294850-7577993.png" },
 ];
   return (
     <div className="technologies-container">

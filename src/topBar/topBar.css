@@ -41,6 +41,16 @@
     /* Optional: gives a background color to the circle */
 }
 
+.logo_container:hover  {
+  
+    filter: drop-shadow(0 0 10px #fffdef);
+    animation: greenbottomBubbles 0.6s ease;
+    /* Optional: logo dim on hover */
+}
+
+
+
+
 .logo_container .logo {
     height: 50px;
     width: auto;
@@ -49,10 +59,28 @@
 
 .logo_container .logo:hover {
     transform: scale(1.1);
-    filter: brightness(0.8);
+    filter: brightness(1);
+    animation: bounce_613 0.4s linear;
     /* Optional: logo dim on hover */
 }
 
+ @keyframes bounce_613 {
+     40% {
+         transform: scale(1.4);
+     }
+
+     60% {
+         transform: scale(0.8);
+     }
+
+     80% {
+         transform: scale(1.2);
+     }
+
+     100% {
+         transform: scale(1);
+     }
+ }
 /* Navigation Links Container */
 .option_container {
     display: flex;
@@ -81,7 +109,7 @@
 
 .top_item:hover {
     /* color: #ed27d3; */
-    color: orangered;
+    color: rgb(165, 248, 234);
     /* Light color for hover */
 }
 
@@ -108,7 +136,7 @@
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: #3182ce;
+    background-color: #684DF4;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease-in-out;
